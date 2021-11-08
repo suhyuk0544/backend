@@ -1,7 +1,8 @@
-{% load static %}
 
-</div>
-<link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+
+
+{% extends 'base.html' %}
+{% block content %}
 <!--<style>
      body {
          background-image:url('https://pbs.twimg.com/media/EbSKBtIUMAA47Eq.jpg');
@@ -10,7 +11,8 @@
 
 </style>-->
 <div class="page-header" >
-    <h1 style="text-align:center; background-color:#8f8681" >블로그</h1>
+    <h1 style="text-align:left; background-color:#8f8681" >CRUD</h1>
+    </div>
 <body>
     <div class="container my-3">
         <table class="table">
@@ -43,3 +45,4 @@
 
     </div>
 </body>
+{% endblock %}
