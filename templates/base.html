@@ -11,11 +11,16 @@
 
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
     <title>mysite</title>
+
 </head>
 <body>
+{% include "navbar.html" %}
 
 {% block content %}
 {% endblock %}
-
+<!-- jQuery JS-->
+<script src="{% static 'jquery-3.6.0.min.js' %}"></script>
+<!-- Bootstrap JS-->
+<script src="{% static 'bootstrap.min.js' %}"></script>
 </body>
 </html>
