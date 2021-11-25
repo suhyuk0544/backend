@@ -4,7 +4,7 @@
 {% extends 'base.html' %}
 {% load pybo_filter %}
 {% block content %}
-
+{% load static %}
 <!--<style>
      body {
          background-image:url('https://pbs.twimg.com/media/EbSKBtIUMAA47Eq.jpg');
@@ -13,7 +13,7 @@
 
 </style>-->
 
-<body>
+<body xmlns="http://www.w3.org/1999/html">
     <div class="container my-3">
         <table class="table">
             <thead>
@@ -87,5 +87,8 @@
         <a href="{% url 'pybo:question_create' %}" class="btn btn-primary">질문 등록하기</a>
 
     </div>
+    <aside style="float: right; position: relative;">
+        <img src="{%static 'banner1.png' %}" alt="banner" width="200" height="600" style="position: relative; bottom: 200px; right: 50px;">
+    </aside>
 </body>
 {% endblock %}
