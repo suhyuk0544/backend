@@ -1,5 +1,6 @@
 {% load static %}
 
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -11,16 +12,45 @@
 
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
     <title>mysite</title>
+    <style>
+        html {
+            position: relative;
+            min-height: 100%;
+            margin: 0;
+        }
+        body {
+            min-height: 100%;
+        }
+        .footer{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            padding: 15px 0;
+            text-align: center;
+
+        }
+
+    </style>
 
 </head>
-<body>
-{% include "navbar.html" %}
+<body style="background: linear-gradient(to right, #a8edea, #fed6e3)">
 
-{% block content %}
-{% endblock %}
-<!-- jQuery JS-->
-<script src="{% static 'jquery-3.6.0.min.js' %}"></script>
-<!-- Bootstrap JS-->
-<script src="{% static 'bootstrap.min.js' %}"></script>
+<div>
+    {% include "navbar.html" %}
+
+    {% block content %}
+    {% endblock %}
+    <!-- jQuery JS-->
+    <script src="{% static 'jquery-3.6.0.min.js' %}"></script>
+    <!-- Bootstrap JS-->
+    <script src="{% static 'bootstrap.min.js' %}"></script>
+</div>
+
+<aside>
+    <img src="C:\projects\mysite\templates\banner2.jpg" alt="banner" height="600" width="200">
+</aside>
+
+<div class="card-footer footer">@suhyuk</div>
 </body>
 </html>
