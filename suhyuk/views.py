@@ -10,19 +10,19 @@ def index(request):
     paginator = Paginator(question_list, 10)  # 페이지당 10개씩 보여주기
     page_obj = paginator.get_page(page)
     context = {'question_list': page_obj}
-    return render(request, 'pybo/question_list.html', context)
+    return render(request, 'suhyuk/question_list.html', context)
 
 
 def detail(request, question_id):
     question = Question.objects.get(id=question_id)
     context = {'question': question}
-    return render(request, 'pybo/question_detail.html', context)
+    return render(request, 'suhyuk/question_detail.html', context)
 
 
 def answer_create(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
     question.answer_set.create(content=request.POST.get('content'), create_date=timezone.now())
-    return redirect('pybo:detail', question_id=question.id)
+    return redirect('suhyuk:detail', question_id=question.id)
 
 def question_create(request):
     if request.method == 'POST':
@@ -31,8 +31,8 @@ def question_create(request):
             question = form.save(commit=False)
             question.create_date = timezone.now()
             question.save()
-            return redirect('pybo:index')
+            return redirect('suhyuk:index')
     else:
         form = QuestionForm()
     context = {'form': form}
-    return render(request, 'pybo/question_form.html', context)
+    return render(request, 'suhyuk/question_form.html', context)

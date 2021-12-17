@@ -1,5 +1,5 @@
 from django import forms
-from pybo.models import Question
+from suhyuk.models import Question
 
 
 class QuestionForm(forms.ModelForm):

@@ -22,8 +22,3 @@ button:hover{
     box-shadow: 0 2px
     4px rgba(0, 79, 255, 0.6);
 }
-
-
-html, body {
-    margin: 0; padding: 0; height: 100%;
-}

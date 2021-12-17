@@ -25,7 +25,7 @@
         </div>
     </div>
     {% endfor %}
-    <form action="{% url 'pybo:answer_create' question.id %}" method="post" class="my-3">
+    <form action="{% url 'suhyuk:answer_create' question.id %}" method="post" class="my-3">
         {% csrf_token %}
         {% if form.errors %}
         <div class="alert alert-danger" role="alert">

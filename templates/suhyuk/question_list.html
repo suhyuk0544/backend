@@ -32,7 +32,7 @@
                 </td>
                 <!--<td>{{ forloop.counter }}</td>-->
                 <td>
-                    <a href="{% url 'pybo:detail' question.id %}">{{ question.subject }}</a>
+                    <a href="{% url 'suhyuk:detail' question.id %}">{{ question.subject }}</a>
                     <!--{% if question.answer_set.count > 0 %}
                     <span class="text-danger small ml-2">{{ question.answer_set.count }}</span>
                     {% endif %}-->
@@ -84,11 +84,11 @@
             </li>
             {% endif %}
         </ul>
-        <a href="{% url 'pybo:question_create' %}" class="btn btn-primary">질문 등록하기</a>
+        <a href="{% url 'suhyuk:question_create' %}" class="btn btn-primary">질문 등록하기</a>
 
     </div>
-    <aside style="float: right; position: relative;">
+    <!--<aside style="float: right; position: relative;">
         <img src="{%static 'banner1.png' %}" alt="banner" width="200" height="600" style="position: relative; bottom: 200px; right: 50px;">
-    </aside>
+    </aside>-->
 </body>
 {% endblock %}
